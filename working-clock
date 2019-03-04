@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  h = checkTime(h);
+  m = checkTime(m);
+  document.getElementById('clock').innerHTML =
+  h + ":" + m;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};
+  return i;
+}
+
+</script>
+<style>
+
+
+
+
+.clock{
+  text-align: center;
+  margin: 40px;
+  padding:20px;
+  font-size: 40px;
+  font-family: 'open sans', sans-serif;
+}
+
+</style>
+</head>
+
+<body onload="startTime()">
+
+<div class="clock" id="clock">
+  
+</div>
+
+
+</body>
+</html>
